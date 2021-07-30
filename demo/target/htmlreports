@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.10.4"},"runtime":{"name":"OpenJDK 64-Bit Server VM","version":"15.0.2+7"},"os":{"name":"Windows 10"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1627650673","nanos":606663100}}},{"source":{"uri":"file:///C:/Users/GodOnlyKnows/Desktop/Nowy%20folder/demo/src/test/resources/features/zadanie2.feature","data":"Feature: zadanie2\r\n\r\n    Scenario: Logowanie na  stronie\r\n    Given nawiguje do: \r\n    | https://prod-kurs.coderslab.pl/index.php?controller\u003dauthentication\u0026back\u003dmy-account |\r\n    And wpisuje login i haslo\r\n    And klikam zaloguj\r\n    Then powinienem byc na stronie profilu\r\n\r\n\r\n\r\n    Scenario Outline: kup sweter\r\n    Given nawiguje do: \r\n    | https://prod-kurs.coderslab.pl/index.php?controller\u003dauthentication\u0026back\u003dmy-account |\r\n    And wpisuje login i haslo\r\n    And klikam zaloguj\r\n    Given nawiguje do:\r\n    | https://prod-kurs.coderslab.pl/index.php?id_product\u003d2\u0026id_product_attribute\u003d10\u0026rewrite\u003dbrown-bear-printed-sweater\u0026controller\u003dproduct |\r\n    And czy ma przecene\r\n    | 20% |\r\n    And wybiera rozmiar \u003crozmiar\u003e\r\n    And wybiera ilosc \u003cilosc\u003e\r\n    And dodaje do koszyka\r\n    And kliknij opcje checkout\r\n    And potwierdza kupno\r\n    And wybiera i potwierdza adres \u003cadres\u003e\r\n    And wybiera i potwierdza dostawe\r\n    When wybiera i potwierdza platnosc\r\n    Then zrzut ekranu zamowienia\r\n\r\n    \r\n\r\nExamples:\r\n    | rozmiar | ilosc | adres |\r\n    | M | 5 | uniqueAdress |\r\n    | XL | 4 | uniqueAdress | \r\n    \r\n\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/GodOnlyKnows/Desktop/Nowy%20folder/demo/src/test/resources/features/zadanie2.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"zadanie2","children":[{"scenario":{"location":{"line":3,"column":5},"keyword":"Scenario","name":"Logowanie na  stronie","steps":[{"location":{"line":4,"column":5},"keyword":"Given ","text":"nawiguje do:","dataTable":{"location":{"line":5,"column":5},"rows":[{"location":{"line":5,"column":5},"cells":[{"location":{"line":5,"column":7},"value":"https://prod-kurs.coderslab.pl/index.php?controller\u003dauthentication\u0026back\u003dmy-account"}],"id":"dcad768f-5202-4741-9807-0faaf469282e"}]},"id":"a70bfcff-b947-4f6f-95dd-2bcb60af87b0"},{"location":{"line":6,"column":5},"keyword":"And ","text":"wpisuje login i haslo","id":"ebf9e028-0245-46da-9fd0-f1d4ecade912"},{"location":{"line":7,"column":5},"keyword":"And ","text":"klikam zaloguj","id":"548f9bf5-113a-41f0-8942-9eeea514a575"},{"location":{"line":8,"column":5},"keyword":"Then ","text":"powinienem byc na stronie profilu","id":"6b830e29-690e-4e49-9a9a-40ec9e21141d"}],"id":"15299125-db60-457a-8f9a-ad75a93a1b7f"}},{"scenario":{"location":{"line":12,"column":5},"keyword":"Scenario Outline","name":"kup sweter","steps":[{"location":{"line":13,"column":5},"keyword":"Given ","text":"nawiguje do:","dataTable":{"location":{"line":14,"column":5},"rows":[{"location":{"line":14,"column":5},"cells":[{"location":{"line":14,"column":7},"value":"https://prod-kurs.coderslab.pl/index.php?controller\u003dauthentication\u0026back\u003dmy-account"}],"id":"d8f1a0b5-2550-4f25-b474-3f28ad087fdf"}]},"id":"2d84bf62-62b1-40a1-884f-b41856e7664d"},{"location":{"line":15,"column":5},"keyword":"And ","text":"wpisuje login i haslo","id":"78cc74d4-61ad-4fb3-b485-26cabb819b08"},{"location":{"line":16,"column":5},"keyword":"And ","text":"klikam zaloguj","id":"23354621-7a02-47f7-86c1-19dd9ab207b4"},{"location":{"line":17,"column":5},"keyword":"Given ","text":"nawiguje do:","dataTable":{"location":{"line":18,"column":5},"rows":[{"location":{"line":18,"column":5},"cells":[{"location":{"line":18,"column":7},"value":"https://prod-kurs.coderslab.pl/index.php?id_product\u003d2\u0026id_product_attribute\u003d10\u0026rewrite\u003dbrown-bear-printed-sweater\u0026controller\u003dproduct"}],"id":"0dda0a6d-3045-4f93-a133-176af129fb83"}]},"id":"c8b1a822-046a-4450-a8c6-c22119992b49"},{"location":{"line":19,"column":5},"keyword":"And ","text":"czy ma przecene","dataTable":{"location":{"line":20,"column":5},"rows":[{"location":{"line":20,"column":5},"cells":[{"location":{"line":20,"column":7},"value":"20%"}],"id":"1555e321-f61d-4805-ac10-6a417b2fde09"}]},"id":"2cdaf118-5fb9-422b-b6a6-461c02c40085"},{"location":{"line":21,"column":5},"keyword":"And ","text":"wybiera rozmiar \u003crozmiar\u003e","id":"10307535-0023-49ce-95cc-2e61468808d3"},{"location":{"line":22,"column":5},"keyword":"And ","text":"wybiera ilosc \u003cilosc\u003e","id":"304a2570-6c81-4229-b3f1-340b6cf25193"},{"location":{"line":23,"column":5},"keyword":"And ","text":"dodaje do koszyka","id":"4350a859-6f94-45e1-8446-9de3f33c60e1"},{"location":{"line":24,"column":5},"keyword":"And ","text":"kliknij opcje checkout","id":"c0ee4ef4-3416-4258-9056-fdd56760fda6"},{"location":{"line":25,"column":5},"keyword":"And ","text":"potwierdza kupno","id":"1fcaee2d-6e4d-4267-8e02-c78766db00b1"},{"location":{"line":26,"column":5},"keyword":"And ","text":"wybiera i potwierdza adres \u003cadres\u003e","id":"00b6246b-b3a4-4ded-9f1a-37c823258a7c"},{"location":{"line":27,"column":5},"keyword":"And ","text":"wybiera i potwierdza dostawe","id":"04d16567-06c0-4468-b9e4-a65bd213c709"},{"location":{"line":28,"column":5},"keyword":"When ","text":"wybiera i potwierdza platnosc","id":"88001b79-5639-43ba-956c-0a84445e3859"},{"location":{"line":29,"column":5},"keyword":"Then ","text":"zrzut ekranu zamowienia","id":"6a9e49b1-cd0c-4a22-be80-55adf64ed244"}],"examples":[{"location":{"line":33,"column":1},"keyword":"Examples","tableHeader":{"location":{"line":34,"column":5},"cells":[{"location":{"line":34,"column":7},"value":"rozmiar"},{"location":{"line":34,"column":17},"value":"ilosc"},{"location":{"line":34,"column":25},"value":"adres"}],"id":"d33e9101-7e23-4c8a-a8a9-bcbcf6cea6b8"},"tableBody":[{"location":{"line":35,"column":5},"cells":[{"location":{"line":35,"column":7},"value":"M"},{"location":{"line":35,"column":11},"value":"5"},{"location":{"line":35,"column":15},"value":"uniqueAdress"}],"id":"4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"},{"location":{"line":36,"column":5},"cells":[{"location":{"line":36,"column":7},"value":"XL"},{"location":{"line":36,"column":12},"value":"4"},{"location":{"line":36,"column":16},"value":"uniqueAdress"}],"id":"45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"}],"id":"6cff4786-9e3a-4f50-b279-7f24094b3830"}],"id":"a6d8d676-14b0-46ea-b690-b27aeab90aa8"}}]}}},{"pickle":{"id":"1ef89470-1340-430b-8a0f-214f2610e298","uri":"file:///C:/Users/GodOnlyKnows/Desktop/Nowy%20folder/demo/src/test/resources/features/zadanie2.feature","name":"Logowanie na  stronie","language":"en","steps":[{"text":"nawiguje do:","argument":{"dataTable":{"rows":[{"cells":[{"value":"https://prod-kurs.coderslab.pl/index.php?controller\u003dauthentication\u0026back\u003dmy-account"}]}]}},"id":"e9ace965-374d-4ba7-b868-3a61eb38eebf","astNodeIds":["a70bfcff-b947-4f6f-95dd-2bcb60af87b0"]},{"text":"wpisuje login i haslo","id":"4b31763b-8246-4ff9-af67-eb7b2470bca5","astNodeIds":["ebf9e028-0245-46da-9fd0-f1d4ecade912"]},{"text":"klikam zaloguj","id":"8da1c143-f923-46a3-8e4b-518e60a485b8","astNodeIds":["548f9bf5-113a-41f0-8942-9eeea514a575"]},{"text":"powinienem byc na stronie profilu","id":"f8539963-9fbd-4a49-891d-037444f8be77","astNodeIds":["6b830e29-690e-4e49-9a9a-40ec9e21141d"]}],"astNodeIds":["15299125-db60-457a-8f9a-ad75a93a1b7f"]}},{"pickle":{"id":"530b3468-d963-4a12-b431-cbe33aca771b","uri":"file:///C:/Users/GodOnlyKnows/Desktop/Nowy%20folder/demo/src/test/resources/features/zadanie2.feature","name":"kup sweter","language":"en","steps":[{"text":"nawiguje do:","argument":{"dataTable":{"rows":[{"cells":[{"value":"https://prod-kurs.coderslab.pl/index.php?controller\u003dauthentication\u0026back\u003dmy-account"}]}]}},"id":"7f75456f-ca2f-4119-8b80-29f33cc0d93c","astNodeIds":["2d84bf62-62b1-40a1-884f-b41856e7664d","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]},{"text":"wpisuje login i haslo","id":"4f737078-b3f8-4c61-99b3-faf9147452a9","astNodeIds":["78cc74d4-61ad-4fb3-b485-26cabb819b08","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]},{"text":"klikam zaloguj","id":"810be9fe-8b29-465a-bcc6-581645a261d3","astNodeIds":["23354621-7a02-47f7-86c1-19dd9ab207b4","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]},{"text":"nawiguje do:","argument":{"dataTable":{"rows":[{"cells":[{"value":"https://prod-kurs.coderslab.pl/index.php?id_product\u003d2\u0026id_product_attribute\u003d10\u0026rewrite\u003dbrown-bear-printed-sweater\u0026controller\u003dproduct"}]}]}},"id":"7b0c0c37-abea-4b36-9ba6-d007e4edcd5c","astNodeIds":["c8b1a822-046a-4450-a8c6-c22119992b49","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]},{"text":"czy ma przecene","argument":{"dataTable":{"rows":[{"cells":[{"value":"20%"}]}]}},"id":"7221fbca-d522-41f7-98f2-a95fc6614edd","astNodeIds":["2cdaf118-5fb9-422b-b6a6-461c02c40085","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]},{"text":"wybiera rozmiar M","id":"57615d8d-92a1-494d-86b8-8af5e5b43360","astNodeIds":["10307535-0023-49ce-95cc-2e61468808d3","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]},{"text":"wybiera ilosc 5","id":"0b14adf1-f5be-4fcb-89e7-d85f7861784b","astNodeIds":["304a2570-6c81-4229-b3f1-340b6cf25193","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]},{"text":"dodaje do koszyka","id":"3ffd143d-4cba-46e7-85c1-e1bf687a8d0c","astNodeIds":["4350a859-6f94-45e1-8446-9de3f33c60e1","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]},{"text":"kliknij opcje checkout","id":"1580f48b-e739-48a4-a8be-996f489b838c","astNodeIds":["c0ee4ef4-3416-4258-9056-fdd56760fda6","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]},{"text":"potwierdza kupno","id":"3c4c2e76-db38-4b13-b319-1e6934174756","astNodeIds":["1fcaee2d-6e4d-4267-8e02-c78766db00b1","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]},{"text":"wybiera i potwierdza adres uniqueAdress","id":"535dd264-1685-4e6a-80a2-66910764d5a7","astNodeIds":["00b6246b-b3a4-4ded-9f1a-37c823258a7c","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]},{"text":"wybiera i potwierdza dostawe","id":"83f20d7c-8295-4838-b7d6-fb98bf3b4ee8","astNodeIds":["04d16567-06c0-4468-b9e4-a65bd213c709","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]},{"text":"wybiera i potwierdza platnosc","id":"44877776-e367-4173-8244-4fc7e907c8d8","astNodeIds":["88001b79-5639-43ba-956c-0a84445e3859","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]},{"text":"zrzut ekranu zamowienia","id":"96dee152-c81a-4e34-a6de-c7f8a767426e","astNodeIds":["6a9e49b1-cd0c-4a22-be80-55adf64ed244","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]}],"astNodeIds":["a6d8d676-14b0-46ea-b690-b27aeab90aa8","4bd975fe-f41c-4c4f-8eaa-04a8a7553d54"]}},{"pickle":{"id":"2ef695c4-8d1b-4eed-9a45-c6c5bd164328","uri":"file:///C:/Users/GodOnlyKnows/Desktop/Nowy%20folder/demo/src/test/resources/features/zadanie2.feature","name":"kup sweter","language":"en","steps":[{"text":"nawiguje do:","argument":{"dataTable":{"rows":[{"cells":[{"value":"https://prod-kurs.coderslab.pl/index.php?controller\u003dauthentication\u0026back\u003dmy-account"}]}]}},"id":"638601ad-8352-4f07-af2a-5c1e0a7171c7","astNodeIds":["2d84bf62-62b1-40a1-884f-b41856e7664d","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]},{"text":"wpisuje login i haslo","id":"d9390931-7200-4096-b47a-052726d8d0b4","astNodeIds":["78cc74d4-61ad-4fb3-b485-26cabb819b08","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]},{"text":"klikam zaloguj","id":"7292ac59-3ac4-4666-867c-bc60444c3ffc","astNodeIds":["23354621-7a02-47f7-86c1-19dd9ab207b4","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]},{"text":"nawiguje do:","argument":{"dataTable":{"rows":[{"cells":[{"value":"https://prod-kurs.coderslab.pl/index.php?id_product\u003d2\u0026id_product_attribute\u003d10\u0026rewrite\u003dbrown-bear-printed-sweater\u0026controller\u003dproduct"}]}]}},"id":"e356e45e-6a0e-4d9c-b47c-7e2bb96742a3","astNodeIds":["c8b1a822-046a-4450-a8c6-c22119992b49","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]},{"text":"czy ma przecene","argument":{"dataTable":{"rows":[{"cells":[{"value":"20%"}]}]}},"id":"dd8ac2e9-3a49-4c39-aacf-4b9a3a002085","astNodeIds":["2cdaf118-5fb9-422b-b6a6-461c02c40085","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]},{"text":"wybiera rozmiar XL","id":"57b7d2ec-1d4c-4801-8ea6-c63dfd273eba","astNodeIds":["10307535-0023-49ce-95cc-2e61468808d3","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]},{"text":"wybiera ilosc 4","id":"efc18881-3f4d-4228-a5a6-90592ff0f261","astNodeIds":["304a2570-6c81-4229-b3f1-340b6cf25193","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]},{"text":"dodaje do koszyka","id":"eef9d516-997d-4880-88b7-1a4745f5ed06","astNodeIds":["4350a859-6f94-45e1-8446-9de3f33c60e1","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]},{"text":"kliknij opcje checkout","id":"2e192043-9a95-47a2-bf1b-e3c97a27be9d","astNodeIds":["c0ee4ef4-3416-4258-9056-fdd56760fda6","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]},{"text":"potwierdza kupno","id":"bd4950f9-8620-456a-93d7-455bb2a76317","astNodeIds":["1fcaee2d-6e4d-4267-8e02-c78766db00b1","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]},{"text":"wybiera i potwierdza adres uniqueAdress","id":"3c0fa401-3cca-4b04-89ad-d372d465aed4","astNodeIds":["00b6246b-b3a4-4ded-9f1a-37c823258a7c","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]},{"text":"wybiera i potwierdza dostawe","id":"092fc992-670e-493b-905c-5f5c45219dc9","astNodeIds":["04d16567-06c0-4468-b9e4-a65bd213c709","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]},{"text":"wybiera i potwierdza platnosc","id":"e6e9993f-e9ce-44b9-8e54-1748cc85407c","astNodeIds":["88001b79-5639-43ba-956c-0a84445e3859","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]},{"text":"zrzut ekranu zamowienia","id":"5f5197f8-7670-499b-8afc-8dfb07e0002d","astNodeIds":["6a9e49b1-cd0c-4a22-be80-55adf64ed244","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]}],"astNodeIds":["a6d8d676-14b0-46ea-b690-b27aeab90aa8","45c959d7-e5ab-4f74-a0ef-d7e6a8c875ba"]}},{"testCase":{"id":"997e7319-e83e-4463-8754-ecb5c68e5f17","pickleId":"1ef89470-1340-430b-8a0f-214f2610e298","testSteps":[{"id":"7f5873b1-c5ad-4be4-897c-4772ced4b4f2","hookId":"dc4b3d26-6aab-4b49-b673-c56bc51a456a"},{"id":"28c9f1c1-970e-46af-bc5f-2435f5337aa2","pickleStepId":"e9ace965-374d-4ba7-b868-3a61eb38eebf","stepDefinitionIds":["8f60923b-0606-47d8-b8ce-495fe49d9e82"],"stepMatchArgumentsLists":[{}]},{"id":"0f6230bc-a283-4c29-8b12-bd100520e274","pickleStepId":"4b31763b-8246-4ff9-af67-eb7b2470bca5","stepDefinitionIds":["e13fc30a-8f7a-4741-b2b3-b133e5a5d7b6"],"stepMatchArgumentsLists":[{}]},{"id":"d8e35209-b090-492d-aefd-0b9e2e51e69c","pickleStepId":"8da1c143-f923-46a3-8e4b-518e60a485b8","stepDefinitionIds":["a3a3d1bc-84a0-4115-b8d0-be1dcdc3f0b2"],"stepMatchArgumentsLists":[{}]},{"id":"e245f142-c20e-4374-8834-8b0486e97ef9","pickleStepId":"f8539963-9fbd-4a49-891d-037444f8be77","stepDefinitionIds":["78c77cb2-1228-4496-a563-353500163122"],"stepMatchArgumentsLists":[{}]},{"id":"f75e2bb8-cacc-48ec-91c0-186da076caae","hookId":"feca02dd-a5da-40dc-95ed-2a11778becfc"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1627650673","nanos":836626100},"testCaseId":"997e7319-e83e-4463-8754-ecb5c68e5f17","id":"e46429fb-fb84-408c-ac08-7b6498e50d08"}},{"testStepStarted":{"timestamp":{"seconds":"1627650673","nanos":897629600},"testStepId":"7f5873b1-c5ad-4be4-897c-4772ced4b4f2","testCaseStartedId":"e46429fb-fb84-408c-ac08-7b6498e50d08"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":845501800}},"timestamp":{"seconds":"1627650675","nanos":743131400},"testStepId":"7f5873b1-c5ad-4be4-897c-4772ced4b4f2","testCaseStartedId":"e46429fb-fb84-408c-ac08-7b6498e50d08"}},{"testStepStarted":{"timestamp":{"seconds":"1627650675","nanos":752131000},"testStepId":"28c9f1c1-970e-46af-bc5f-2435f5337aa2","testCaseStartedId":"e46429fb-fb84-408c-ac08-7b6498e50d08"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":613723200}},"timestamp":{"seconds":"1627650677","nanos":365854200},"testStepId":"28c9f1c1-970e-46af-bc5f-2435f5337aa2","testCaseStartedId":"e46429fb-fb84-408c-ac08-7b6498e50d08"}},{"testStepStarted":{"timestamp":{"seconds":"1627650677","nanos":366855400},"testStepId":"0f6230bc-a283-4c29-8b12-bd100520e274","testCaseStartedId":"e46429fb-fb84-408c-ac08-7b6498e50d08"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":185515900}},"timestamp":{"seconds":"1627650677","nanos":552371300},"testStepId":"0f6230bc-a283-4c29-8b12-bd100520e274","testCaseStartedId":"e46429fb-fb84-408c-ac08-7b6498e50d08"}},{"testStepStarted":{"timestamp":{"seconds":"1627650677","nanos":553372100},"testStepId":"d8e35209-b090-492d-aefd-0b9e2e51e69c","testCaseStartedId":"e46429fb-fb84-408c-ac08-7b6498e50d08"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":566010800}},"timestamp":{"seconds":"1627650678","nanos":119382900},"testStepId":"d8e35209-b090-492d-aefd-0b9e2e51e69c","testCaseStartedId":"e46429fb-fb84-408c-ac08-7b6498e50d08"}},{"testStepStarted":{"timestamp":{"seconds":"1627650678","nanos":119382900},"testStepId":"e245f142-c20e-4374-8834-8b0486e97ef9","testCaseStartedId":"e46429fb-fb84-408c-ac08-7b6498e50d08"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":8001700}},"timestamp":{"seconds":"1627650678","nanos":127384600},"testStepId":"e245f142-c20e-4374-8834-8b0486e97ef9","testCaseStartedId":"e46429fb-fb84-408c-ac08-7b6498e50d08"}},{"testStepStarted":{"timestamp":{"seconds":"1627650678","nanos":128381500},"testStepId":"f75e2bb8-cacc-48ec-91c0-186da076caae","testCaseStartedId":"e46429fb-fb84-408c-ac08-7b6498e50d08"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":260001600}},"timestamp":{"seconds":"1627650678","nanos":388383100},"testStepId":"f75e2bb8-cacc-48ec-91c0-186da076caae","testCaseStartedId":"e46429fb-fb84-408c-ac08-7b6498e50d08"}},{"testCaseFinished":{"timestamp":{"seconds":"1627650678","nanos":388383100},"testCaseStartedId":"e46429fb-fb84-408c-ac08-7b6498e50d08"}},{"testCase":{"id":"a7a53b87-1bd4-45a4-a7a5-7d2b9e31ada5","pickleId":"530b3468-d963-4a12-b431-cbe33aca771b","testSteps":[{"id":"5130a261-be94-4d3e-bfa9-890b759bc757","hookId":"dc4b3d26-6aab-4b49-b673-c56bc51a456a"},{"id":"5ce20c4c-5d4f-45ed-81d8-e52d5699fe5f","pickleStepId":"7f75456f-ca2f-4119-8b80-29f33cc0d93c","stepDefinitionIds":["1c4801fd-6275-43cd-94d0-8f732140db6b"],"stepMatchArgumentsLists":[{}]},{"id":"417a25c3-6270-4246-9fbc-64e2c6954ccc","pickleStepId":"4f737078-b3f8-4c61-99b3-faf9147452a9","stepDefinitionIds":["cdd11632-6e99-4478-9629-677d32268dea"],"stepMatchArgumentsLists":[{}]},{"id":"888aba3f-f038-4a2e-b5fa-66081adcc8b1","pickleStepId":"810be9fe-8b29-465a-bcc6-581645a261d3","stepDefinitionIds":["3b000383-58b0-4e3b-82ab-6608318fb39b"],"stepMatchArgumentsLists":[{}]},{"id":"a252dcee-7c8b-42e7-97d6-17387ec19f95","pickleStepId":"7b0c0c37-abea-4b36-9ba6-d007e4edcd5c","stepDefinitionIds":["1c4801fd-6275-43cd-94d0-8f732140db6b"],"stepMatchArgumentsLists":[{}]},{"id":"708b58aa-8f12-4467-9b18-a5ab585b4bd0","pickleStepId":"7221fbca-d522-41f7-98f2-a95fc6614edd","stepDefinitionIds":["5728d386-fc8a-41b3-b157-6aa5094046c5"],"stepMatchArgumentsLists":[{}]},{"id":"bf7d8b19-424e-429c-906e-00851e79774a","pickleStepId":"57615d8d-92a1-494d-86b8-8af5e5b43360","stepDefinitionIds":["1dc8e141-4f6c-469b-9904-05a357f492f3"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":16,"value":"M"}}]}]},{"id":"6b3768d4-307c-488f-a66e-c3be570bdcdb","pickleStepId":"0b14adf1-f5be-4fcb-89e7-d85f7861784b","stepDefinitionIds":["52619ba3-54be-4e07-907a-b6238ff0698f"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":14,"value":"5"}}]}]},{"id":"e8bf6440-6157-4731-96e1-72c4dc8ca606","pickleStepId":"3ffd143d-4cba-46e7-85c1-e1bf687a8d0c","stepDefinitionIds":["17bb8ade-eecf-4616-a0d6-9287da79ba33"],"stepMatchArgumentsLists":[{}]},{"id":"cb19cbbb-c9f3-401c-86ca-b57a1a81ff21","pickleStepId":"1580f48b-e739-48a4-a8be-996f489b838c","stepDefinitionIds":["5c842f7c-f342-4a1f-9e76-b8f4711aba36"],"stepMatchArgumentsLists":[{}]},{"id":"b0a95bdf-d73e-4c39-b88d-cb698d98bc5e","pickleStepId":"3c4c2e76-db38-4b13-b319-1e6934174756","stepDefinitionIds":["2fe728a0-107f-4dfb-95a5-100cbdf90888"],"stepMatchArgumentsLists":[{}]},{"id":"afdf9f09-16f7-4c12-bf36-6e4404a84c50","pickleStepId":"535dd264-1685-4e6a-80a2-66910764d5a7","stepDefinitionIds":["b059f969-b0a9-4723-a790-56ef1b321808"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":27,"value":"uniqueAdress"}}]}]},{"id":"caec91d1-0cad-420a-a052-b92f9679c347","pickleStepId":"83f20d7c-8295-4838-b7d6-fb98bf3b4ee8","stepMatchArgumentsLists":[{}]},{"id":"17f98ea8-1f3b-4831-aedc-89c60bb8687e","pickleStepId":"44877776-e367-4173-8244-4fc7e907c8d8","stepMatchArgumentsLists":[{}]},{"id":"8d368128-b6b6-4b72-b3f8-2c66346d9bf6","pickleStepId":"96dee152-c81a-4e34-a6de-c7f8a767426e","stepMatchArgumentsLists":[{}]},{"id":"3d8b1865-bb14-45ac-a695-0c6da0dc15a3","hookId":"feca02dd-a5da-40dc-95ed-2a11778becfc"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1627650678","nanos":465810100},"testCaseId":"a7a53b87-1bd4-45a4-a7a5-7d2b9e31ada5","id":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650678","nanos":466810200},"testStepId":"5130a261-be94-4d3e-bfa9-890b759bc757","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":230983800}},"timestamp":{"seconds":"1627650679","nanos":697794000},"testStepId":"5130a261-be94-4d3e-bfa9-890b759bc757","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650679","nanos":698793500},"testStepId":"5ce20c4c-5d4f-45ed-81d8-e52d5699fe5f","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":583801400}},"timestamp":{"seconds":"1627650681","nanos":282594900},"testStepId":"5ce20c4c-5d4f-45ed-81d8-e52d5699fe5f","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650681","nanos":284595700},"testStepId":"417a25c3-6270-4246-9fbc-64e2c6954ccc","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":187683100}},"timestamp":{"seconds":"1627650681","nanos":472278800},"testStepId":"417a25c3-6270-4246-9fbc-64e2c6954ccc","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650681","nanos":473280200},"testStepId":"888aba3f-f038-4a2e-b5fa-66081adcc8b1","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":583362600}},"timestamp":{"seconds":"1627650682","nanos":56642800},"testStepId":"888aba3f-f038-4a2e-b5fa-66081adcc8b1","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650682","nanos":57643500},"testStepId":"a252dcee-7c8b-42e7-97d6-17387ec19f95","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":384477500}},"timestamp":{"seconds":"1627650682","nanos":442121000},"testStepId":"a252dcee-7c8b-42e7-97d6-17387ec19f95","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650682","nanos":442121000},"testStepId":"708b58aa-8f12-4467-9b18-a5ab585b4bd0","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":45001000}},"timestamp":{"seconds":"1627650682","nanos":487122000},"testStepId":"708b58aa-8f12-4467-9b18-a5ab585b4bd0","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650682","nanos":489121900},"testStepId":"bf7d8b19-424e-429c-906e-00851e79774a","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":73998600}},"timestamp":{"seconds":"1627650682","nanos":563120500},"testStepId":"bf7d8b19-424e-429c-906e-00851e79774a","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650682","nanos":563120500},"testStepId":"6b3768d4-307c-488f-a66e-c3be570bdcdb","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":96858600}},"timestamp":{"seconds":"1627650682","nanos":659979100},"testStepId":"6b3768d4-307c-488f-a66e-c3be570bdcdb","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650682","nanos":660977300},"testStepId":"e8bf6440-6157-4731-96e1-72c4dc8ca606","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":59937000}},"timestamp":{"seconds":"1627650682","nanos":720914300},"testStepId":"e8bf6440-6157-4731-96e1-72c4dc8ca606","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650682","nanos":720914300},"testStepId":"cb19cbbb-c9f3-401c-86ca-b57a1a81ff21","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":926071700}},"timestamp":{"seconds":"1627650683","nanos":646986000},"testStepId":"cb19cbbb-c9f3-401c-86ca-b57a1a81ff21","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650683","nanos":651979600},"testStepId":"b0a95bdf-d73e-4c39-b88d-cb698d98bc5e","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":370579200}},"timestamp":{"seconds":"1627650684","nanos":22558800},"testStepId":"b0a95bdf-d73e-4c39-b88d-cb698d98bc5e","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650684","nanos":22558800},"testStepId":"afdf9f09-16f7-4c12-bf36-6e4404a84c50","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"27","nanos":175793900}},"timestamp":{"seconds":"1627650711","nanos":198352700},"testStepId":"afdf9f09-16f7-4c12-bf36-6e4404a84c50","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650711","nanos":199347100},"testStepId":"caec91d1-0cad-420a-a052-b92f9679c347","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"UNDEFINED","duration":{"nanos":1000700}},"timestamp":{"seconds":"1627650711","nanos":200347800},"testStepId":"caec91d1-0cad-420a-a052-b92f9679c347","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650711","nanos":202347100},"testStepId":"17f98ea8-1f3b-4831-aedc-89c60bb8687e","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1627650711","nanos":202347100},"testStepId":"17f98ea8-1f3b-4831-aedc-89c60bb8687e","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650711","nanos":204355100},"testStepId":"8d368128-b6b6-4b72-b3f8-2c66346d9bf6","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1627650711","nanos":204355100},"testStepId":"8d368128-b6b6-4b72-b3f8-2c66346d9bf6","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepStarted":{"timestamp":{"seconds":"1627650711","nanos":205350400},"testStepId":"3d8b1865-bb14-45ac-a695-0c6da0dc15a3","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":412995000}},"timestamp":{"seconds":"1627650711","nanos":618345400},"testStepId":"3d8b1865-bb14-45ac-a695-0c6da0dc15a3","testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testCaseFinished":{"timestamp":{"seconds":"1627650711","nanos":619347400},"testCaseStartedId":"cc7e17f1-ec83-4b85-8768-3e1c0c2dc6ff"}},{"testCase":{"id":"d8250c1e-1243-420e-b298-ab96dd3f3e8b","pickleId":"2ef695c4-8d1b-4eed-9a45-c6c5bd164328","testSteps":[{"id":"e36ae95c-b35f-491c-9f20-e389fcb1f4de","hookId":"dc4b3d26-6aab-4b49-b673-c56bc51a456a"},{"id":"6f8f5529-7c38-4e76-95d9-9d0c0f435007","pickleStepId":"638601ad-8352-4f07-af2a-5c1e0a7171c7","stepDefinitionIds":["a393d295-ca98-4a31-81c8-61f97c91624d"],"stepMatchArgumentsLists":[{}]},{"id":"b5e9e259-2ea2-4fe9-bffc-995056f003d7","pickleStepId":"d9390931-7200-4096-b47a-052726d8d0b4","stepDefinitionIds":["27e8186d-5364-49c4-b5ad-0472217df847"],"stepMatchArgumentsLists":[{}]},{"id":"63b1589f-58e7-42d2-965e-8e518d2b9266","pickleStepId":"7292ac59-3ac4-4666-867c-bc60444c3ffc","stepDefinitionIds":["d8da7bbb-1b51-4cd7-82f1-71a740cacfd6"],"stepMatchArgumentsLists":[{}]},{"id":"9738a34b-9460-41ae-b8d5-ad871cbb9ffc","pickleStepId":"e356e45e-6a0e-4d9c-b47c-7e2bb96742a3","stepDefinitionIds":["a393d295-ca98-4a31-81c8-61f97c91624d"],"stepMatchArgumentsLists":[{}]},{"id":"31f2f6ef-19cc-4fec-97fc-37927f40db98","pickleStepId":"dd8ac2e9-3a49-4c39-aacf-4b9a3a002085","stepDefinitionIds":["a023a9ad-6282-4388-9013-7237c4c7ac62"],"stepMatchArgumentsLists":[{}]},{"id":"ed923de1-4927-42a5-ab05-6ccdd1e371cd","pickleStepId":"57b7d2ec-1d4c-4801-8ea6-c63dfd273eba","stepDefinitionIds":["43581fa7-5543-4729-8789-09e06d756573"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":16,"value":"XL"}}]}]},{"id":"2d2b2a1b-8942-45df-af72-e278ce698733","pickleStepId":"efc18881-3f4d-4228-a5a6-90592ff0f261","stepDefinitionIds":["afb8dc45-c6c4-40a3-b0d8-4a2da1d2e649"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":14,"value":"4"}}]}]},{"id":"99322f0b-892a-4f14-b804-8e533a043d26","pickleStepId":"eef9d516-997d-4880-88b7-1a4745f5ed06","stepDefinitionIds":["f311bb27-4985-4a8a-bc83-48d2129e790d"],"stepMatchArgumentsLists":[{}]},{"id":"c10151d9-d36c-4140-b1a8-16703347e75c","pickleStepId":"2e192043-9a95-47a2-bf1b-e3c97a27be9d","stepDefinitionIds":["1b6b79ee-5cfd-4abb-94d2-396b0a322eac"],"stepMatchArgumentsLists":[{}]},{"id":"fcfe491f-d7fe-4611-ae74-65a74b82a74a","pickleStepId":"bd4950f9-8620-456a-93d7-455bb2a76317","stepDefinitionIds":["277f89df-cc4c-4258-806a-3b3705611266"],"stepMatchArgumentsLists":[{}]},{"id":"250a3e74-80bb-4b04-b046-52fe3af223be","pickleStepId":"3c0fa401-3cca-4b04-89ad-d372d465aed4","stepDefinitionIds":["60a056c1-06c8-4601-8080-e91d77dbae6d"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":27,"value":"uniqueAdress"}}]}]},{"id":"6fe0d155-10d1-48b0-abf5-e4b70895be7a","pickleStepId":"092fc992-670e-493b-905c-5f5c45219dc9","stepMatchArgumentsLists":[{}]},{"id":"e26a06fc-61e8-45f1-b4d5-04613501a388","pickleStepId":"e6e9993f-e9ce-44b9-8e54-1748cc85407c","stepMatchArgumentsLists":[{}]},{"id":"5fc272da-92a3-46f7-bd21-45eb1ea17bcf","pickleStepId":"5f5197f8-7670-499b-8afc-8dfb07e0002d","stepMatchArgumentsLists":[{}]},{"id":"ef6532b7-ccf5-4d2a-8973-d8953dc4913e","hookId":"feca02dd-a5da-40dc-95ed-2a11778becfc"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1627650711","nanos":631344500},"testCaseId":"d8250c1e-1243-420e-b298-ab96dd3f3e8b","id":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepStarted":{"timestamp":{"seconds":"1627650711","nanos":632346300},"testStepId":"e36ae95c-b35f-491c-9f20-e389fcb1f4de","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":228449500}},"timestamp":{"seconds":"1627650712","nanos":860795800},"testStepId":"e36ae95c-b35f-491c-9f20-e389fcb1f4de","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepStarted":{"timestamp":{"seconds":"1627650712","nanos":861792000},"testStepId":"6f8f5529-7c38-4e76-95d9-9d0c0f435007","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":309603800}},"timestamp":{"seconds":"1627650714","nanos":171395800},"testStepId":"6f8f5529-7c38-4e76-95d9-9d0c0f435007","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepStarted":{"timestamp":{"seconds":"1627650714","nanos":172388300},"testStepId":"b5e9e259-2ea2-4fe9-bffc-995056f003d7","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepFinished":{"testStepResult":{"status":"FAILED","message":"org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: MicrosoftEdge\u003d92.0.902.55)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-SBFM7PD\u0027, ip: \u0027192.168.0.100\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002715.0.2\u0027\nDriver info: org.openqa.selenium.edge.EdgeDriver\nCapabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 92.0.902.55, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:60157}, msedge: {msedgedriverVersion: 92.0.902.55 (2f31ea24c029d5..., userDataDir: C:\\Users\\GODONL~1\\AppData\\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 121b8854e6f9ad5ff69d62fb945cfcd5\n*** Element info: {Using\u003dname, value\u003demail}\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)\r\n\tat org.openqa.selenium.By$ByName.findElement(By.java:284)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat zadanie.zadanie1.writeLoginAndPassword(zadanie1.java:64)\r\n\tat ✽.wpisuje login i haslo(file:///C:/Users/GodOnlyKnows/Desktop/Nowy%20folder/demo/src/test/resources/features/zadanie2.feature:15)\r\n","duration":{"nanos":24640900}},"timestamp":{"seconds":"1627650714","nanos":197029200},"testStepId":"b5e9e259-2ea2-4fe9-bffc-995056f003d7","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepStarted":{"timestamp":{"seconds":"1627650714","nanos":203028100},"testStepId":"63b1589f-58e7-42d2-965e-8e518d2b9266","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1627650714","nanos":203028100},"testStepId":"63b1589f-58e7-42d2-965e-8e518d2b9266","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepStarted":{"timestamp":{"seconds":"1627650714","nanos":204030500},"testStepId":"9738a34b-9460-41ae-b8d5-ad871cbb9ffc","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1627650714","nanos":204030500},"testStepId":"9738a34b-9460-41ae-b8d5-ad871cbb9ffc","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepStarted":{"timestamp":{"seconds":"1627650714","nanos":205027700},"testStepId":"31f2f6ef-19cc-4fec-97fc-37927f40db98","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1627650714","nanos":205027700},"testStepId":"31f2f6ef-19cc-4fec-97fc-37927f40db98","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepStarted":{"timestamp":{"seconds":"1627650714","nanos":205027700},"testStepId":"ed923de1-4927-42a5-ab05-6ccdd1e371cd","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1627650714","nanos":205027700},"testStepId":"ed923de1-4927-42a5-ab05-6ccdd1e371cd","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepStarted":{"timestamp":{"seconds":"1627650714","nanos":207028600},"testStepId":"2d2b2a1b-8942-45df-af72-e278ce698733","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1627650714","nanos":207028600},"testStepId":"2d2b2a1b-8942-45df-af72-e278ce698733","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepStarted":{"timestamp":{"seconds":"1627650714","nanos":208034700},"testStepId":"99322f0b-892a-4f14-b804-8e533a043d26","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1627650714","nanos":208034700},"testStepId":"99322f0b-892a-4f14-b804-8e533a043d26","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepStarted":{"timestamp":{"seconds":"1627650714","nanos":208034700},"testStepId":"c10151d9-d36c-4140-b1a8-16703347e75c","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1627650714","nanos":208034700},"testStepId":"c10151d9-d36c-4140-b1a8-16703347e75c","testCaseStartedId":"e33695b1-8b00-4184-aa05-3adb7bf49a7a"}},{"testStepStarted":{"timestamp":{"seconds":"1627650714","nanos":209028000},"testStepId":"fcfe491f-d7fe-4
